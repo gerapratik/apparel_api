@@ -117,3 +117,13 @@ Response Error:
 Status Codes:
 200: Success
 400: Insufficient stock
+
+Key Features:
+Update Apparel: Users can easily update details for individual clothing items—like name, size, color, price, and available quantity. This is done by sending a PUT request to /api/apparel/update, along with the item’s unique ID and the new information.
+
+Bulk Update Apparel: Users can update multiple clothing items in one go. By sending a PUT request to /api/apparel/bulk-update, they can include an array of items with their updated details.
+
+Check Order Fulfillment: Users can check if their orders can be fulfilled based on what’s in stock. By sending a POST request to /api/apparel/fulfill-check, they provide a list of items and quantities to see if they can get what they ordered.
+
+Calculate Order Cost: The API also calculates the total cost of an order. Users can send a POST request to /api/apparel/calculate-cost with the items and their quantities, and the API will return the total cost if everything is available. If there’s not enough stock, it will send back an error message.
+
