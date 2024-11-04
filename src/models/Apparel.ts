@@ -1,4 +1,4 @@
-// src/models/Apparel.ts
+
 
 export interface ApparelItem {
     code: string;
